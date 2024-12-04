@@ -1,14 +1,14 @@
-const express = require('express');
+  const express = require('express');
 const bodyParser = require('body-parser');
-const usuarioService = require('./usuarioService');
+const usuarioRoutes = require('./routes/usuarioRoutes'); 
 
 const app = express();
 
 app.use(bodyParser.json());
 
-app.use('/usuarios', usuarioService);
+app.use('/usuarios', usuarioRoutes);
 
-const port = 3000;
+const port = 9000;
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });
