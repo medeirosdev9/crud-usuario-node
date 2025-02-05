@@ -6,7 +6,7 @@ class UsuarioController {
     const { nome } = req.body;
 
     if (!nome) {
-      return res.status(400).send({ message: 'Referência e título são obrigatórios.' });
+      return res.status(400).send({ message: 'Nome é obrigatório.' });
     }
 
     try {
